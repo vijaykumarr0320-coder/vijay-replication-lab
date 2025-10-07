@@ -1,69 +1,92 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code2, Palette, Settings, Database, Wrench } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "languages",
+      title: "💻 languages",
       icon: Code2,
       skills: ["C++", "Python", "Java"],
     },
     {
-      title: "frontend",
+      title: "🎨 frontend",
       icon: Palette,
       skills: ["React.js", "HTML", "CSS", "Tailwind CSS"],
     },
     {
-      title: "backend",
+      title: "⚙️ backend",
       icon: Settings,
       skills: ["Node.js", "Express.js", "Javascript"],
     },
     {
-      title: "databases",
+      title: "🗄️ databases",
       icon: Database,
       skills: ["MongoDB", "MySQL"],
     },
     {
-      title: "tools",
+      title: "🛠️ tools",
       icon: Wrench,
       skills: ["Git", "GitHub", "Postman", "REST API's", "ThunderClient", "bruno"],
     },
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-secondary/20">
+    <section id="skills" className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Skills & Technologies</h2>
-          <p className="text-muted-foreground">Tools and technologies I work with</p>
+          <h2 
+            className="text-4xl font-bold mb-4"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            Skills & Technologies
+          </h2>
+          <p style={{ color: 'var(--text-secondary)' }}>Tools and technologies I work with</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Card key={index} className="bg-card border-border hover:border-primary transition-colors">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Icon className="h-5 w-5 text-primary" />
-                    <span className="capitalize">{category.title}</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, skillIndex) => (
-                      <Badge 
-                        key={skillIndex} 
-                        variant="secondary"
-                        className="bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <div 
+                key={index} 
+                className="p-6 rounded-xl transition-all hover:-translate-y-2"
+                style={{
+                  background: 'var(--card-bg)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}
+              >
+                <h3 
+                  className="flex items-center gap-2 text-lg mb-4 font-semibold"
+                  style={{ 
+                    color: 'var(--accent-blue)',
+                    fontFamily: 'var(--font-heading)'
+                  }}
+                >
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span 
+                      key={skillIndex}
+                      className="px-4 py-2 rounded-full text-sm transition-all cursor-default hover:-translate-y-1"
+                      style={{
+                        background: 'rgba(0, 212, 255, 0.1)',
+                        color: 'var(--accent-blue)',
+                        border: '1px solid rgba(0, 212, 255, 0.3)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = 'var(--accent-blue)';
+                        e.currentTarget.style.color = 'var(--primary-bg)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = 'rgba(0, 212, 255, 0.1)';
+                        e.currentTarget.style.color = 'var(--accent-blue)';
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             );
           })}
         </div>

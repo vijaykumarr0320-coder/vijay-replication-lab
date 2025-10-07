@@ -45,12 +45,14 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b" style={{ 
+      background: 'rgba(10, 10, 10, 0.95)',
+      borderColor: 'rgba(255, 255, 255, 0.1)'
+    }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="text-xl font-bold">
-            <span className="text-foreground">Your</span>
-            <span className="text-primary"> Name</span>
+          <a href="#home" className="text-xl font-bold gradient-text" style={{ fontFamily: 'var(--font-heading)' }}>
+            Your Name
           </a>
 
           {/* Desktop Navigation */}
@@ -63,13 +65,32 @@ const Navigation = () => {
                   e.preventDefault();
                   handleClick(item.href);
                 }}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-all relative ${
                   activeSection === item.href.slice(1)
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "after:w-full"
+                    : "after:w-0"
                 }`}
+                style={{
+                  color: activeSection === item.href.slice(1) ? 'var(--accent-blue)' : 'var(--text-secondary)',
+                  fontFamily: 'var(--font-heading)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = 'var(--accent-blue)';
+                }}
+                onMouseLeave={(e) => {
+                  if (activeSection !== item.href.slice(1)) {
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                  }
+                }}
               >
                 {item.name}
+                <span 
+                  className="absolute bottom-[-4px] left-0 h-[2px] transition-all duration-300"
+                  style={{
+                    width: activeSection === item.href.slice(1) ? '100%' : '0',
+                    background: 'var(--gradient-primary)'
+                  }}
+                />
               </a>
             ))}
           </div>
@@ -86,7 +107,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -95,11 +116,11 @@ const Navigation = () => {
                   e.preventDefault();
                   handleClick(item.href);
                 }}
-                className={`block py-2 text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === item.href.slice(1)
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
+                className="block py-2 text-sm font-medium transition-colors"
+                style={{
+                  color: activeSection === item.href.slice(1) ? 'var(--accent-blue)' : 'var(--text-secondary)',
+                  fontFamily: 'var(--font-heading)'
+                }}
               >
                 {item.name}
               </a>

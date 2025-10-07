@@ -1,5 +1,3 @@
-import { Card } from "@/components/ui/card";
-
 const About = () => {
   const stats = [
     { value: "3+", label: "Projects" },
@@ -8,11 +6,20 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section 
+      id="about" 
+      className="py-20 px-4"
+      style={{ background: 'var(--secondary-bg)' }}
+    >
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-muted-foreground">Get to know me better</p>
+          <h2 
+            className="text-4xl font-bold mb-4"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            About Me
+          </h2>
+          <p style={{ color: 'var(--text-secondary)' }}>Get to know me better</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -21,18 +28,33 @@ const About = () => {
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
                 alt="About me"
-                className="w-full h-full object-cover rounded-2xl shadow-xl"
+                className="w-full h-full object-cover rounded-2xl"
+                style={{ boxShadow: 'var(--shadow-lg)' }}
               />
             </div>
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-primary">Dedicated Problem Solver</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 
+              className="text-2xl font-bold"
+              style={{ 
+                color: 'var(--accent-green)',
+                fontFamily: 'var(--font-heading)'
+              }}
+            >
+              Dedicated Problem Solver
+            </h3>
+            <p 
+              className="leading-relaxed"
+              style={{ color: 'var(--text-secondary)' }}
+            >
               Computer science student skilled in C++, Python, and problem-solving, 
               with hands-on experience in building scalable projects and solving coding challenges.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p 
+              className="leading-relaxed"
+              style={{ color: 'var(--text-secondary)' }}
+            >
               Currently pursuing my Bachelor's degree at RV University (2024-2028), I specialize 
               in the MERN stack and am passionate about creating efficient, scalable solutions 
               that address real-world problems through innovative technology.
@@ -40,10 +62,30 @@ const About = () => {
 
             <div className="grid grid-cols-3 gap-4 pt-6">
               {stats.map((stat, index) => (
-                <Card key={index} className="p-6 text-center bg-card hover:bg-secondary transition-colors">
-                  <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </Card>
+                <div 
+                  key={index} 
+                  className="p-6 text-center rounded-xl transition-all hover:-translate-y-1"
+                  style={{ 
+                    background: 'var(--card-bg)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                  }}
+                >
+                  <div 
+                    className="text-3xl font-bold mb-2 gradient-text"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div 
+                    className="text-sm uppercase tracking-wider"
+                    style={{ 
+                      color: 'var(--text-secondary)',
+                      letterSpacing: '1px'
+                    }}
+                  >
+                    {stat.label}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
