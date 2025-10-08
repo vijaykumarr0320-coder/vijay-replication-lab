@@ -40,7 +40,9 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <button 
+              <a 
+                href="/Vijay_Kumar_R.pdf"
+                download="Vijay_Kumar_R.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all hover:-translate-y-1"
                 style={{
                   background: 'var(--gradient-primary)',
@@ -57,7 +59,7 @@ const Hero = () => {
               >
                 <Download className="h-5 w-5" />
                 Download Resume
-              </button>
+              </a>
               <button 
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all hover:-translate-y-1"
                 style={{
