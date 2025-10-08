@@ -1,6 +1,39 @@
 import { Download, Mail, ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [typingText, setTypingText] = useState("");
+  const [typingIndex, setTypingIndex] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
+
+  const typingTexts = [
+    "Aspiring Backend Engineer with C++ & Python Foundation",
+    "MERN Stack Developer | Node.js & Express.js Specialist",
+    "Building Scalable Solutions & Driving Innovation",
+    "Building Scalable Solutions with Creativity & Code",
+    "C++ & Python Specialist | MERN Stack Developer",
+    "Problem Solver & Innovation Enthusiast",
+  ];
+
+  // Typing effect
+  useEffect(() => {
+    const currentText = typingTexts[textIndex];
+
+    const typingInterval = setInterval(() => {
+      if (typingIndex < currentText.length) {
+        setTypingText(currentText.substring(0, typingIndex + 1));
+        setTypingIndex((prev) => prev + 1);
+      } else {
+        setTimeout(() => {
+          setTypingText("");
+          setTypingIndex(0);
+          setTextIndex((prev) => (prev + 1) % typingTexts.length);
+        }, 2000);
+      }
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+  }, [typingIndex, textIndex]);
   return (
     <section 
       id="home" 
@@ -20,13 +53,13 @@ const Hero = () => {
                 Hi, I'm <span className="gradient-text">Your Name</span>
               </h1>
               <h2 
-                className="text-2xl md:text-3xl font-semibold"
+                className="text-2xl md:text-3xl font-semibold min-h-[2.5rem]"
                 style={{ 
                   color: 'var(--accent-blue)',
                   fontFamily: 'var(--font-heading)'
                 }}
               >
-                Aspiring Backend Engineer with C++
+                {typingText}<span className="animate-pulse">|</span>
               </h2>
               <p 
                 className="leading-relaxed text-lg"
