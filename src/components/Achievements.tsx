@@ -73,14 +73,17 @@ const Achievements = () => {
                         href={achievement.certificate}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full transition-all hover:scale-110 shrink-0"
+                        className="px-4 py-2 rounded-lg transition-all hover:scale-105 shrink-0 flex items-center gap-2"
                         style={{ 
                           background: 'var(--accent-green)',
-                          color: 'var(--primary-bg)'
+                          color: 'var(--primary-bg)',
+                          fontSize: '14px',
+                          fontWeight: '600'
                         }}
                         title="View Certificate"
                       >
-                        <ExternalLink size={16} />
+                        <ExternalLink size={18} />
+                        <span>View</span>
                       </a>
                     )}
                   </div>
