@@ -47,14 +47,14 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "your.email@example.com" },
-    { icon: Phone, label: "Phone", value: "+1 234 567 8900" },
-    { icon: MapPin, label: "Location", value: "City, Country" },
+    { icon: Mail, label: "Email", value: "vijaykumar.vk3105@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+91 6364449593" },
+    { icon: MapPin, label: "Location", value: "Bangalore, India" },
   ];
 
   const socialLinks = [
-    { icon: Github, label: "GitHub", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: Github, label: "GitHub", href: "https://github.com/Vijay-kumar2006" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/vijay-kumar-r-866213319/" },
   ];
 
   return (

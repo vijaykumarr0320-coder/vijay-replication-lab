@@ -50,7 +50,7 @@ const Hero = () => {
                 className="text-5xl md:text-6xl font-bold"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                Hi, I'm <span className="gradient-text">Your Name</span>
+                Hi, I'm <span className="gradient-text">Vijay Kumar R</span>
               </h1>
               <h2 
                 className="text-2xl md:text-3xl font-semibold min-h-[2.5rem]"
