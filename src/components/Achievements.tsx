@@ -1,31 +1,25 @@
-import { Award, Trophy, Star, Medal } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Achievements = () => {
   const achievements = [
     {
-      icon: Trophy,
-      title: "Competitive Programming",
-      description: "Solved 500+ problems across LeetCode, CodeChef, and Codeforces",
-      year: "2024"
+      icon: "🏆",
+      title: "Hackathon Finalist",
+      description: "Reached the finals in multiple hackathons, demonstrating exceptional problem-solving skills and innovative thinking in competitive coding environments.",
+      certificate: "https://drive.google.com/file/d/19tMNwnLR4DW3SUi1MJRBedfIwMnRztmq/view?usp=sharing",
     },
     {
-      icon: Award,
-      title: "Hackathon Winner",
-      description: "First place in University Hackathon for innovative web solution",
-      year: "2024"
+      icon: "💻",
+      title: "CodeVerse GDG RVU Challenge",
+      description: "Participated in the CodeVerse GDG RVU Challenge, showcasing coding expertise and collaborative problem-solving abilities.",
+      certificate: "https://drive.google.com/file/d/1896HTBghsNnYHjynyGydTBdwUgqkOHFq/view?usp=sharing",
     },
     {
-      icon: Star,
-      title: "Academic Excellence",
-      description: "Maintained 9+ CGPA throughout Bachelor's degree",
-      year: "2024-Present"
+      icon: "👥",
+      title: "Coding Events Leadership",
+      description: "Led and organized coding events, fostering a collaborative learning environment and mentoring fellow students in programming challenges.",
+      certificate: "",
     },
-    {
-      icon: Medal,
-      title: "Open Source Contributor",
-      description: "Active contributor to various open-source projects on GitHub",
-      year: "2023-Present"
-    }
   ];
 
   return (
@@ -59,31 +53,36 @@ const Achievements = () => {
             >
               <div className="flex items-start gap-4">
                 <div 
-                  className="p-3 rounded-lg transition-all group-hover:scale-110"
+                  className="text-4xl p-3 rounded-lg transition-all group-hover:scale-110"
                   style={{ 
                     background: 'var(--secondary-bg)',
-                    color: 'var(--accent-green)'
                   }}
                 >
-                  <achievement.icon size={28} />
+                  {achievement.icon}
                 </div>
                 <div className="flex-1">
-                  <div className="flex justify-between items-start mb-2">
+                  <div className="flex justify-between items-start mb-2 gap-3">
                     <h3 
                       className="text-xl font-bold"
                       style={{ fontFamily: 'var(--font-heading)' }}
                     >
                       {achievement.title}
                     </h3>
-                    <span 
-                      className="text-sm font-medium px-3 py-1 rounded-full"
-                      style={{ 
-                        background: 'var(--secondary-bg)',
-                        color: 'var(--accent-green)'
-                      }}
-                    >
-                      {achievement.year}
-                    </span>
+                    {achievement.certificate && (
+                      <a
+                        href={achievement.certificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full transition-all hover:scale-110 shrink-0"
+                        style={{ 
+                          background: 'var(--accent-green)',
+                          color: 'var(--primary-bg)'
+                        }}
+                        title="View Certificate"
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
                   </div>
                   <p 
                     className="leading-relaxed"

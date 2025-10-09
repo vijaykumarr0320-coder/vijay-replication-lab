@@ -5,17 +5,17 @@ const Skills = () => {
     {
       title: "💻 languages",
       icon: Code2,
-      skills: ["C++", "Python", "Java"],
+      skills: ["C++", "Python", "JavaScript", "TypeScript", "Java"],
     },
     {
       title: "🎨 frontend",
       icon: Palette,
-      skills: ["React.js", "HTML", "CSS", "Tailwind CSS"],
+      skills: ["React", "HTML", "CSS", "Tailwind CSS"],
     },
     {
       title: "⚙️ backend",
       icon: Settings,
-      skills: ["Node.js", "Express.js", "Javascript"],
+      skills: ["Node.js", "Express.js", "REST API Development", "JSON Data Handling", "Environment Variables (dotenv)"],
     },
     {
       title: "🗄️ databases",
@@ -25,7 +25,7 @@ const Skills = () => {
     {
       title: "🛠️ tools",
       icon: Wrench,
-      skills: ["Git", "GitHub", "Postman", "REST API's", "ThunderClient", "bruno"],
+      skills: ["Git", "GitHub", "VS Code", "Linux", "Figma"],
     },
   ];
 

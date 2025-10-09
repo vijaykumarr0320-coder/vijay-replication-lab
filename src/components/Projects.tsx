@@ -4,27 +4,27 @@ const Projects = () => {
   const projects = [
     {
       title: "EcoTrack",
-      description: "A comprehensive environmental tracking application built with MERN stack. Features real-time data visualization and analysis of environmental metrics.",
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=500&fit=crop",
-      tags: ["MongoDB", "Express.js", "React", "Node.js"],
-      demo: "#",
-      github: "#",
+      description: "A comprehensive environmental impact tracking app that helps users monitor their carbon footprint through daily activities and provides actionable insights for sustainable living.",
+      image: "https://i.ibb.co/Sw4YRsHm/Ecotrack-tumbnail.png",
+      tags: ["React", "Node.js", "MongoDB", "Express.js"],
+      demo: "https://ecotrackcapstone.netlify.app/",
+      github: "https://github.com/kalviumcommunity/S67_VijayKumar_Capstone_EcoTrack.git",
+    },
+    {
+      title: "Lexolution",
+      description: "An AI-powered language learning platform that adapts to individual learning styles and provides personalized vocabulary building exercises with real-time pronunciation feedback.",
+      image: "/images/design-mode/2e94c944f19a408d1a8126c28fee4830.jpg",
+      tags: ["Python", "Flask", "JavaScript", "MySQL"],
+      demo: "",
+      github: "https://github.com/Vijay-kumar2006/LexoLaw_CodeOfDuty.git",
     },
     {
       title: "JobGenie",
-      description: "AI-powered job matching platform that connects candidates with opportunities. Built with Node.js backend and modern frontend frameworks.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
-      tags: ["Node.js", "Express.js", "MySQL", "REST API"],
-      demo: "#",
-      github: "#",
-    },
-    {
-      title: "Portfolio Website",
-      description: "Modern responsive portfolio website showcasing projects and skills. Built with React and Tailwind CSS for optimal performance.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-      tags: ["React", "Tailwind CSS", "TypeScript"],
-      demo: "#",
-      github: "#",
+      description: "A smart job matching platform that uses machine learning to connect candidates with relevant opportunities based on skills, experience, and career preferences.",
+      image: "/images/design-mode/0065c3fb3c6637d51f69a6e987d05450.jpg",
+      tags: ["React", "Node.js", "MongoDB", "Python"],
+      demo: "",
+      github: "https://github.com/kalviumcommunity/Vijay-Jobgenie.git",
     },
   ];
 
@@ -66,15 +66,21 @@ const Projects = () => {
                   className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity"
                   style={{ background: 'rgba(0, 0, 0, 0.8)' }}
                 >
-                  <a
-                    href={project.demo}
-                    className="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                    style={{ background: 'var(--accent-blue)' }}
-                  >
-                    <ExternalLink className="h-5 w-5" style={{ color: 'white' }} />
-                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
+                      style={{ background: 'var(--accent-blue)' }}
+                    >
+                      <ExternalLink className="h-5 w-5" style={{ color: 'white' }} />
+                    </a>
+                  )}
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
                     style={{ background: 'var(--accent-green)' }}
                   >
