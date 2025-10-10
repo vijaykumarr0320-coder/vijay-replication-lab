@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Camera } from "lucide-react";
 import BooksModal from "./BooksModal";
+import NaturePhotographyModal from "./NaturePhotographyModal";
 
 const Interests = () => {
   const [isBooksModalOpen, setIsBooksModalOpen] = useState(false);
+  const [isPhotographyModalOpen, setIsPhotographyModalOpen] = useState(false);
 
   const interests = [
     {
@@ -15,6 +17,7 @@ const Interests = () => {
       icon: "📸",
       title: "Photography",
       description: "Capturing moments and exploring creative perspectives through photography",
+      hasExplore: true,
     },
     {
       icon: "🛡️",
@@ -86,7 +89,11 @@ const Interests = () => {
               
               {interest.hasExplore && (
                 <button
-                  onClick={() => setIsBooksModalOpen(true)}
+                  onClick={() => 
+                    interest.title === "Reading Books" 
+                      ? setIsBooksModalOpen(true) 
+                      : setIsPhotographyModalOpen(true)
+                  }
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all hover:-translate-y-1 mt-2"
                   style={{
                     background: 'var(--accent-blue)',
@@ -94,8 +101,17 @@ const Interests = () => {
                     fontFamily: 'var(--font-heading)',
                   }}
                 >
-                  <BookOpen className="h-4 w-4" />
-                  Explore Books
+                  {interest.title === "Reading Books" ? (
+                    <>
+                      <BookOpen className="h-4 w-4" />
+                      Explore Books
+                    </>
+                  ) : (
+                    <>
+                      <Camera className="h-4 w-4" />
+                      Explore My Nature Photography
+                    </>
+                  )}
                 </button>
               )}
             </div>
@@ -105,6 +121,11 @@ const Interests = () => {
         <BooksModal 
           isOpen={isBooksModalOpen} 
           onClose={() => setIsBooksModalOpen(false)} 
+        />
+        
+        <NaturePhotographyModal
+          isOpen={isPhotographyModalOpen}
+          onClose={() => setIsPhotographyModalOpen(false)}
         />
       </div>
     </section>
