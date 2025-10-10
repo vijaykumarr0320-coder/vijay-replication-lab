@@ -53,7 +53,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="text-xl font-bold gradient-text" style={{ fontFamily: 'var(--font-heading)' }}>
-            Your Name
+            Vijay Kumar R
           </a>
 
           {/* Desktop Navigation */}
