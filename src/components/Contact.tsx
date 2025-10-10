@@ -133,6 +133,8 @@ const Contact = () => {
                     <a
                       key={index}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:-translate-y-1"
                       style={{
                         background: 'var(--card-bg)',
