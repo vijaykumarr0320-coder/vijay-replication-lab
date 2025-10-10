@@ -1,5 +1,6 @@
 import { Download, Mail, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   const [typingText, setTypingText] = useState("");
@@ -123,8 +124,8 @@ const Hero = () => {
                 style={{ background: 'var(--gradient-secondary)' }}
               />
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                alt="Profile"
+                src={profileImage}
+                alt="Vijay Kumar R - Profile"
                 className="w-full h-full object-cover"
               />
             </div>
