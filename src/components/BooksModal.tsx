@@ -22,7 +22,7 @@ const BooksModal = ({ isOpen, onClose }: BooksModalProps) => {
     title: "The Science of Self-Realization",
     author: "A.C. Bhaktivedanta Swami Prabhupada",
     year: "2024",
-    rating: 4.5,
+    rating: 4,
     summary: "A spiritual guide exploring the deeper meaning of life, consciousness, and self-realization through timeless Vedic wisdom.",
     genre: "Spirituality"
   },
@@ -30,7 +30,7 @@ const BooksModal = ({ isOpen, onClose }: BooksModalProps) => {
     title: "Think Like a Monk",
     author: "Jay Shetty",
     year: "2024",
-    rating: 5,
+    rating: 4,
     summary: "A practical guide to overcoming negativity, finding purpose, and training your mind for peace and success.",
     genre: "Self-Help"
   },
@@ -46,7 +46,7 @@ const BooksModal = ({ isOpen, onClose }: BooksModalProps) => {
     title: "Rich Dad Poor Dad",
     author: "Robert T. Kiyosaki",
     year: "2023",
-    rating: 5,
+    rating: 4,
     summary: "A powerful personal finance classic that contrasts two approaches to money, investing, and building wealth.",
     genre: "Finance"
   },
