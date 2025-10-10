@@ -18,39 +18,48 @@ const BooksModal = ({ isOpen, onClose }: BooksModalProps) => {
   if (!isOpen) return null;
 
   const books: Book[] = [
-    {
-      title: "Clean Code",
-      author: "Robert C. Martin",
-      year: "2024",
-      rating: 5,
-      summary: "A handbook of agile software craftsmanship that teaches how to write code that is easy to read and maintain.",
-      genre: "Programming"
-    },
-    {
-      title: "The Pragmatic Programmer",
-      author: "David Thomas & Andrew Hunt",
-      year: "2024",
-      rating: 5,
-      summary: "Your journey to mastery - essential reading for anyone interested in software development.",
-      genre: "Programming"
-    },
-    {
-      title: "Atomic Habits",
-      author: "James Clear",
-      year: "2023",
-      rating: 5,
-      summary: "An easy and proven way to build good habits and break bad ones through small changes.",
-      genre: "Self-Help"
-    },
-    {
-      title: "Designing Data-Intensive Applications",
-      author: "Martin Kleppmann",
-      year: "2023",
-      rating: 4,
-      summary: "The big ideas behind reliable, scalable, and maintainable systems.",
-      genre: "Technology"
-    },
-  ];
+  {
+    title: "The Science of Self-Realization",
+    author: "A.C. Bhaktivedanta Swami Prabhupada",
+    year: "2024",
+    rating: 4.5,
+    summary: "A spiritual guide exploring the deeper meaning of life, consciousness, and self-realization through timeless Vedic wisdom.",
+    genre: "Spirituality"
+  },
+  {
+    title: "Think Like a Monk",
+    author: "Jay Shetty",
+    year: "2024",
+    rating: 5,
+    summary: "A practical guide to overcoming negativity, finding purpose, and training your mind for peace and success.",
+    genre: "Self-Help"
+  },
+  {
+    title: "Eat That Frog!",
+    author: "Brian Tracy",
+    year: "2023",
+    rating: 5,
+    summary: "21 great ways to stop procrastinating and get more done in less time.",
+    genre: "Productivity"
+  },
+  {
+    title: "Rich Dad Poor Dad",
+    author: "Robert T. Kiyosaki",
+    year: "2023",
+    rating: 5,
+    summary: "A powerful personal finance classic that contrasts two approaches to money, investing, and building wealth.",
+    genre: "Finance"
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    year: "2023",
+    rating: 5,
+    summary: "An easy and proven way to build good habits and break bad ones through small changes.",
+    genre: "Self-Help"
+  }
+];
+
 
   return (
     <div 

@@ -9,7 +9,7 @@ const Interests = () => {
     {
       icon: "🚴",
       title: "Bike Riding",
-      description: "Exploring new places and staying active through cycling adventures",
+      description: "Exploring new places and staying active through bike adventures",
     },
     {
       icon: "📸",
