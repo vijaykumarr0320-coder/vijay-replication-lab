@@ -1,4 +1,10 @@
+import { useState } from "react";
+import { BookOpen } from "lucide-react";
+import BooksModal from "./BooksModal";
+
 const Interests = () => {
+  const [isBooksModalOpen, setIsBooksModalOpen] = useState(false);
+
   const interests = [
     {
       icon: "🚴",
@@ -19,6 +25,12 @@ const Interests = () => {
       icon: "🐧",
       title: "Linux Exploration",
       description: "Diving deep into Linux systems, command line tools, and open-source technologies",
+    },
+    {
+      icon: "📚",
+      title: "Reading Books",
+      description: "Passionate about reading books on technology, self-improvement, and software engineering",
+      hasExplore: true,
     },
   ];
 
@@ -66,14 +78,34 @@ const Interests = () => {
                 {interest.title}
               </h3>
               <p 
-                className="text-sm leading-relaxed"
+                className="text-sm leading-relaxed mb-4"
                 style={{ color: 'var(--text-secondary)' }}
               >
                 {interest.description}
               </p>
+              
+              {interest.hasExplore && (
+                <button
+                  onClick={() => setIsBooksModalOpen(true)}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all hover:-translate-y-1 mt-2"
+                  style={{
+                    background: 'var(--accent-blue)',
+                    color: 'var(--primary-bg)',
+                    fontFamily: 'var(--font-heading)',
+                  }}
+                >
+                  <BookOpen className="h-4 w-4" />
+                  Explore Books
+                </button>
+              )}
             </div>
           ))}
         </div>
+        
+        <BooksModal 
+          isOpen={isBooksModalOpen} 
+          onClose={() => setIsBooksModalOpen(false)} 
+        />
       </div>
     </section>
   );
