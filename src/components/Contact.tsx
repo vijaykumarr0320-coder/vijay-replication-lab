@@ -28,7 +28,9 @@ const Contact = () => {
       const result = await response.json();
 
       if (result.success) {
-        toast.success("Message sent successfully!");
+        alert(
+          "Thank you for your message! I will get back to you soon.\n\nNote: If this is urgent, you can also email me directly at vijaykumar.vk3105@gmail.com"
+        );
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         toast.error("Failed to send message. Please try again.");
