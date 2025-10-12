@@ -17,7 +17,6 @@ const Interests = () => {
       icon: "📸",
       title: "Photography",
       description: "Capturing moments and exploring creative perspectives through photography",
-      hasExplore: true,
     },
     {
       icon: "🛡️",
