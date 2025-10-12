@@ -1,4 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
+import krivyaThumbnail from "@/assets/krivya-thumbnail.jpg";
 
 const Projects = () => {
   const projects = [
@@ -9,6 +10,14 @@ const Projects = () => {
       tags: ["React", "Node.js", "MongoDB", "Express.js"],
       demo: "https://ecotrackcapstone.netlify.app/",
       github: "https://github.com/kalviumcommunity/S67_VijayKumar_Capstone_EcoTrack.git",
+    },
+    {
+      title: "Krivya",
+      description: "An AI-powered misinformation detection tool inspired by Arjuna and Krishna's strategy in the Mahabharata, designed to help users navigate the digital \"maze\" of misinformation. Krivya analyses content in real time, provides clear explanations for flagged information, and ensures user privacy through selective scanning.",
+      image: krivyaThumbnail,
+      tags: ["React", "Node.js", "Python", "FastAPI", "MongoDB", "RoBERTa"],
+      demo: "https://askkrivyagenai.vercel.app/",
+      github: "https://github.com/Vijay-kumar2006/CodeOfDuty-Krivya.git",
     },
     {
       title: "Lexolution",
