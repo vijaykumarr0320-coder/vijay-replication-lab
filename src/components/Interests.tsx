@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { BookOpen, Camera } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import BooksModal from "./BooksModal";
-import NaturePhotographyModal from "./NaturePhotographyModal";
 
 const Interests = () => {
   const [isBooksModalOpen, setIsBooksModalOpen] = useState(false);
-  const [isPhotographyModalOpen, setIsPhotographyModalOpen] = useState(false);
 
   const interests = [
     {
@@ -88,11 +86,7 @@ const Interests = () => {
               
               {interest.hasExplore && (
                 <button
-                  onClick={() => 
-                    interest.title === "Reading Books" 
-                      ? setIsBooksModalOpen(true) 
-                      : setIsPhotographyModalOpen(true)
-                  }
+                  onClick={() => setIsBooksModalOpen(true)}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all hover:-translate-y-1 mt-2"
                   style={{
                     background: 'var(--accent-blue)',
@@ -100,17 +94,8 @@ const Interests = () => {
                     fontFamily: 'var(--font-heading)',
                   }}
                 >
-                  {interest.title === "Reading Books" ? (
-                    <>
-                      <BookOpen className="h-4 w-4" />
-                      Explore Books
-                    </>
-                  ) : (
-                    <>
-                      <Camera className="h-4 w-4" />
-                      Explore My Nature Photography
-                    </>
-                  )}
+                  <BookOpen className="h-4 w-4" />
+                  Explore Books
                 </button>
               )}
             </div>
@@ -120,11 +105,6 @@ const Interests = () => {
         <BooksModal 
           isOpen={isBooksModalOpen} 
           onClose={() => setIsBooksModalOpen(false)} 
-        />
-        
-        <NaturePhotographyModal
-          isOpen={isPhotographyModalOpen}
-          onClose={() => setIsPhotographyModalOpen(false)}
         />
       </div>
     </section>
