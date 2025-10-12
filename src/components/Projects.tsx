@@ -65,11 +65,11 @@ const Projects = () => {
                 boxShadow: 'var(--shadow-md)'
               }}
             >
-              <div className="relative overflow-hidden h-48">
+              <div className="relative overflow-hidden h-48 flex items-center justify-center" style={{ background: 'rgba(0, 0, 0, 0.3)' }}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                 />
                 <div 
                   className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity"
