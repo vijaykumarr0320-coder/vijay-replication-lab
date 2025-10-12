@@ -1,4 +1,10 @@
 import { X } from "lucide-react";
+import nature1 from "@/assets/nature-photos/nature1.jpg";
+import nature2 from "@/assets/nature-photos/nature2.jpg";
+import nature3 from "@/assets/nature-photos/nature3.jpg";
+import nature4 from "@/assets/nature-photos/nature4.jpg";
+import nature5 from "@/assets/nature-photos/nature5.jpg";
+import nature6 from "@/assets/nature-photos/nature6.jpg";
 
 interface NaturePhotographyModalProps {
   isOpen: boolean;
@@ -10,88 +16,40 @@ const NaturePhotographyModal = ({ isOpen, onClose }: NaturePhotographyModalProps
 
   const photos = [
     {
-      src: "https://drive.google.com/uc?export=view&id=1eUNSjwegxpJ9QwjAYGqJaa5bH-ev4CCD",
-      title: "Golden Mountain Sunrise",
-      location: "Himalayan Foothills",
-      description: "The first light of dawn gently kissing the mountain peaks.",
+      src: nature1,
+      title: "Misty Mountain Dawn",
+      location: "Mountain Range",
+      description: "Early morning fog rolling over the peaks",
     },
     {
-      src: "https://drive.google.com/uc?export=view&id=1sIjVIAvAxEHpIAOnjlWJxgEBWMdP5EPa",
-      title: "Tranquil Lake Reflection",
-      location: "Emerald Lake",
-      description: "Crystal-clear waters reflecting the calm blue skies.",
+      src: nature2,
+      title: "Lake Reflections",
+      location: "Tranquil Lake",
+      description: "Perfect mirror reflections during golden hour",
     },
     {
-      src: "https://drive.google.com/uc?export=view&id=1XFSis7yzWOGY-0rOgFXrMb0-qbHYQ9Zn",
-      title: "Blooming Valley",
-      location: "Wildflower Plains",
-      description: "A vibrant tapestry of wildflowers stretching across the valley.",
+      src: nature3,
+      title: "Wildflower Meadow",
+      location: "Local Meadow",
+      description: "Vibrant wildflowers in full bloom",
     },
     {
-      src: "https://drive.google.com/uc?export=view&id=1duhgKJxgCih5L19J42Z2F1QqVdWH10R_",
-      title: "Mystic Waterfall",
-      location: "Hidden Forest Trail",
-      description: "A gentle cascade flowing through moss-covered rocks.",
+      src: nature4,
+      title: "Forest Sunbeams",
+      location: "Forest Trail",
+      description: "Magical light filtering through the canopy",
     },
     {
-      src: "https://drive.google.com/uc?export=view&id=1QtEhPIGY7uc2pV15LjnlI1KD8igaTY_E",
-      title: "Sunset Over Hills",
-      location: "Western Ridge",
-      description: "Golden hues of the setting sun painting the rolling hills.",
+      src: nature5,
+      title: "Cascading Waters",
+      location: "Hidden Waterfall",
+      description: "Serene waterfall surrounded by lush greenery",
     },
     {
-      src: "https://drive.google.com/uc?export=view&id=1FFsxXpR-b9ne-9wP6s33UlqqUfrCnmQA",
-      title: "Enchanted Forest Path",
-      location: "Whispering Woods",
-      description: "Soft light filtering through tall evergreens guiding the trail.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=15fMcPUelxGeHHSCHb24odj47YzgJJsSP",
-      title: "Starry Skies",
+      src: nature6,
+      title: "Starry Night",
       location: "Mountain Summit",
-      description: "The Milky Way shining brightly in the still of night.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=1k_u8P2Qgv6ZAqdft7FbbBMnDy3HB98rx",
-      title: "Misty River Morning",
-      location: "Riverside Grove",
-      description: "Gentle morning fog rolling over calm river waters.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=1oiPsofhagd9kvcJQNltp2WSwUgKXioEO",
-      title: "Desert Dunes Glow",
-      location: "Golden Sands",
-      description: "Soft waves of sand glowing under the sunset’s warmth.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=1Bw2qVoX724YSKb6yEvQYdW7nbmUNkPXC",
-      title: "Serene Countryside",
-      location: "Greenfield Valley",
-      description: "A peaceful farmland landscape bathed in warm evening light.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=1prIw3cPRotHEY7Ma_OmFSAvSPeo5Q73A",
-      title: "Ocean Horizon",
-      location: "Coastal Bay",
-      description: "Waves crashing gently under a pastel sky.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=1Dsi00CQq_0JsifuQ-YuapQD66y7qdW3F",
-      title: "Autumn Leaves Trail",
-      location: "Maple Forest",
-      description: "A golden carpet of leaves lining the forest path.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=14ibbhTxtNVWZtbWrq7o5CwTH0hk1BM_I",
-      title: "Lakeside Morning Mist",
-      location: "Crystal Lake",
-      description: "Soft fog rising from the water as sunlight breaks through.",
-    },
-    {
-      src: "https://drive.google.com/uc?export=view&id=1USbqNz2HRsDIWVB9LTwb53dZ12tKdcPL",
-      title: "Snow-Capped Peaks",
-      location: "Northern Ranges",
-      description: "Towering mountains blanketed in shimmering white snow.",
+      description: "Milky Way stretching across the night sky",
     },
   ];
 
@@ -191,4 +149,3 @@ const NaturePhotographyModal = ({ isOpen, onClose }: NaturePhotographyModalProps
 };
 
 export default NaturePhotographyModal;
-
