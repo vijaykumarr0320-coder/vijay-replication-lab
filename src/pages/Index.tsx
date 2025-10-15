@@ -6,10 +6,12 @@ import Projects from "@/components/Projects";
 import Achievements from "@/components/Achievements";
 import Interests from "@/components/Interests";
 import Contact from "@/components/Contact";
+import Background3D from "@/components/Background3D";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Background3D />
       <Navigation />
       <Hero />
       <About />
