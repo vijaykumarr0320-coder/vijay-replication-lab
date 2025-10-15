@@ -8,8 +8,8 @@ const About = () => {
   return (
     <section 
       id="about" 
-      className="py-20 px-4"
-      style={{ background: 'var(--secondary-bg)' }}
+      className="py-20 px-4 relative"
+      style={{ background: 'transparent' }}
     >
       <div className="container mx-auto">
         <div className="text-center mb-16">
@@ -24,21 +24,19 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 glass-card p-2 glow-cyan">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
                 alt="About me"
-                className="w-full h-full object-cover rounded-2xl"
-                style={{ boxShadow: 'var(--shadow-lg)' }}
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 
-              className="text-2xl font-bold"
+              className="text-2xl font-bold gradient-text"
               style={{ 
-                color: 'var(--accent-green)',
                 fontFamily: 'var(--font-heading)'
               }}
             >
@@ -64,11 +62,7 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div 
                   key={index} 
-                  className="p-6 text-center rounded-xl transition-all hover:-translate-y-1"
-                  style={{ 
-                    background: 'var(--card-bg)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)'
-                  }}
+                  className="glass-card p-6 text-center"
                 >
                   <div 
                     className="text-3xl font-bold mb-2 gradient-text"

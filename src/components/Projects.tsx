@@ -40,8 +40,8 @@ const Projects = () => {
   return (
     <section 
       id="projects" 
-      className="py-20 px-4"
-      style={{ background: 'var(--secondary-bg)' }}
+      className="py-20 px-4 relative"
+      style={{ background: 'transparent' }}
     >
       <div className="container mx-auto">
         <div className="text-center mb-16">
@@ -58,12 +58,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="rounded-xl overflow-hidden transition-all hover:-translate-y-3 group"
-              style={{
-                background: 'var(--card-bg)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                boxShadow: 'var(--shadow-md)'
-              }}
+              className="glass-card overflow-hidden transition-all hover:-translate-y-3 group"
             >
               <div className="relative overflow-hidden h-48 flex items-center justify-center" style={{ background: 'rgba(0, 0, 0, 0.05)' }}>
                 <img
@@ -100,9 +95,8 @@ const Projects = () => {
               
               <div className="p-6 space-y-4">
                 <h3 
-                  className="text-xl font-bold"
+                  className="text-xl font-bold gradient-text"
                   style={{ 
-                    color: 'var(--accent-green)',
                     fontFamily: 'var(--font-heading)'
                   }}
                 >
@@ -121,9 +115,9 @@ const Projects = () => {
                       key={tagIndex}
                       className="px-3 py-1 rounded-full text-xs"
                       style={{
-                        background: 'rgba(0, 255, 136, 0.1)',
-                        color: 'var(--accent-green)',
-                        border: '1px solid rgba(0, 255, 136, 0.3)'
+                        background: 'rgba(181, 55, 255, 0.1)',
+                        color: 'var(--neon-purple)',
+                        border: '1px solid rgba(181, 55, 255, 0.3)'
                       }}
                     >
                       {tag}

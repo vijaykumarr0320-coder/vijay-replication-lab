@@ -30,7 +30,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="py-20 px-4 relative">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 
@@ -48,16 +48,12 @@ const Skills = () => {
             return (
               <div 
                 key={index} 
-                className="p-6 rounded-xl transition-all hover:-translate-y-2"
-                style={{
-                  background: 'var(--card-bg)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
-                }}
+                className="glass-card p-6"
               >
                 <h3 
                   className="flex items-center gap-2 text-lg mb-4 font-semibold"
                   style={{ 
-                    color: 'var(--accent-blue)',
+                    color: 'var(--neon-cyan)',
                     fontFamily: 'var(--font-heading)'
                   }}
                 >
@@ -69,17 +65,19 @@ const Skills = () => {
                       key={skillIndex}
                       className="px-4 py-2 rounded-full text-sm transition-all cursor-default hover:-translate-y-1"
                       style={{
-                        background: 'rgba(0, 212, 255, 0.1)',
-                        color: 'var(--accent-blue)',
-                        border: '1px solid rgba(0, 212, 255, 0.3)'
+                        background: 'rgba(0, 245, 255, 0.1)',
+                        color: 'var(--neon-cyan)',
+                        border: '1px solid rgba(0, 245, 255, 0.3)'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = 'var(--accent-blue)';
+                        e.currentTarget.style.background = 'var(--neon-cyan)';
                         e.currentTarget.style.color = 'var(--primary-bg)';
+                        e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 245, 255, 0.5)';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = 'rgba(0, 212, 255, 0.1)';
-                        e.currentTarget.style.color = 'var(--accent-blue)';
+                        e.currentTarget.style.background = 'rgba(0, 245, 255, 0.1)';
+                        e.currentTarget.style.color = 'var(--neon-cyan)';
+                        e.currentTarget.style.boxShadow = 'none';
                       }}
                     >
                       {skill}

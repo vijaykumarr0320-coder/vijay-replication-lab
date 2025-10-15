@@ -40,7 +40,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center pt-16 px-4 relative"
       style={{
-        background: 'radial-gradient(ellipse at center, rgba(0, 212, 255, 0.05) 0%, transparent 50%)'
+        background: 'transparent'
       }}
     >
       <div className="container mx-auto">
@@ -56,7 +56,7 @@ const Hero = () => {
               <h2 
                 className="text-2xl md:text-3xl font-semibold min-h-[2.5rem]"
                 style={{ 
-                  color: 'var(--accent-blue)',
+                  color: 'var(--neon-cyan)',
                   fontFamily: 'var(--font-heading)'
                 }}
               >
@@ -77,38 +77,30 @@ const Hero = () => {
               <a 
                 href="/Vijay_Kumar_R.pdf"
                 download="Vijay_Kumar_R.pdf"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all hover:-translate-y-1"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all hover:-translate-y-1 glow-cyan"
                 style={{
                   background: 'var(--gradient-primary)',
                   color: 'var(--primary-bg)',
-                  fontFamily: 'var(--font-heading)',
-                  boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = 'var(--shadow-glow)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 212, 255, 0.3)';
+                  fontFamily: 'var(--font-heading)'
                 }}
               >
                 <Download className="h-5 w-5" />
                 Download Resume
               </a>
               <button 
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all hover:-translate-y-1"
+                className="glass-card inline-flex items-center gap-2 px-6 py-3 font-medium transition-all hover:-translate-y-1"
                 style={{
-                  background: 'transparent',
                   color: 'var(--text-primary)',
-                  border: '2px solid var(--accent-blue)',
+                  border: '2px solid var(--neon-purple)',
                   fontFamily: 'var(--font-heading)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'var(--accent-blue)';
-                  e.currentTarget.style.color = 'var(--primary-bg)';
+                  e.currentTarget.style.borderColor = 'var(--neon-cyan)';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 245, 255, 0.5)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = 'var(--text-primary)';
+                  e.currentTarget.style.borderColor = 'var(--neon-purple)';
+                  e.currentTarget.style.boxShadow = 'none';
                 }}
               >
                 <Mail className="h-5 w-5" />
@@ -118,11 +110,7 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center">
-            <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-3xl overflow-hidden" style={{ boxShadow: 'var(--shadow-lg)' }}>
-              <div 
-                className="absolute inset-0 z-10"
-                style={{ background: 'var(--gradient-secondary)' }}
-              />
+            <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-3xl overflow-hidden glass-card glow-purple float">
               <img
                 src={profileImage}
                 alt="Vijay Kumar R - Profile"
@@ -133,10 +121,10 @@ const Hero = () => {
         </div>
 
         <div 
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer pulse-glow"
           style={{ animation: 'bounce 2s infinite' }}
         >
-          <ChevronDown className="h-6 w-6" style={{ color: 'var(--accent-blue)' }} />
+          <ChevronDown className="h-6 w-6" style={{ color: 'var(--neon-cyan)' }} />
         </div>
       </div>
     </section>
